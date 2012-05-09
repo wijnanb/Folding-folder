@@ -54,8 +54,6 @@ var Folder = (function () {
 		if (typeof delay == 'undefined') { delay = 200; }
 		$(".row").css("-webkit-transition-delay",delay+"ms");
 
-		value = Math.min(value, 179);
-
 		$(".row-1up, .row-2up, .row-3up").css("-webkit-transform", "translate3d(0px,-200px,0px) rotate3d(0,0,1,"+value+"deg)");
 		$(".row-1down, .row-2down, row-3down").css("-webkit-transform", "translate3d(0px,200px,0px) rotate3d(0,0,1,-"+value+"deg)");	
 	
@@ -74,7 +72,7 @@ var Folder = (function () {
 		$(".level2, .level4, .level6").css("-webkit-transform", "translate3d(200px,0px,0px) rotate3d(0,1,0,-"+value+"deg)");
 		$(".level1, .level3, .level5, .level7").css("-webkit-transform", "translate3d(200px,0px,0px) rotate3d(0,1,0,"+value+"deg)");
 	
-		if (value>=140){
+		if (value>=140) {
 			$(".folder").css("-webkit-transform", "translate3d("+middle+"px,0px,0px) rotate3d(0,1,0,"+(value/2)+"deg)");
 		} else {
 			$(".folder").css("-webkit-transform", "translate3d("+middle+"px,0px,0px) rotate3d(0,1,0,0deg)");
@@ -93,7 +91,6 @@ var Folder = (function () {
 			$(".folder").toggleClass("folded", value>=179 );
 		});
 	
-
 		$("#slider-1 input").val(value);
 	}
 
@@ -109,6 +106,6 @@ Zepto(function($){
   Folder.init();
 
   setTimeout(function(){
-  	 Folder.close();
+  	 Folder.open();
   }, 1200 );
 })
