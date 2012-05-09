@@ -1,8 +1,9 @@
 var Folder = (function () {
 
 	var canvas;
-	var opened = true;
+	var folded = true;
 	var boxes = [];
+	var foldedTimeout;
 
 	var init = function() {
 		canvas = $("#canvas");
@@ -22,17 +23,17 @@ var Folder = (function () {
 	var open = function() {
 		openVertical(0)
 		openHorizontal(15, 800);
-		opened = true;
+		folded = false;
 	}
 
 	var close = function() {
 		openHorizontal(180);
 		openVertical(180, 800);
-		opened = false;
+		folded = true;
 	}
 
 	var toggle = function() {
-		opened ? close() : open();
+		folded ? open() : close();
 	}
 
 	var onSliderChange = function(event) {
@@ -67,6 +68,8 @@ var Folder = (function () {
 
 		var middle = (4-1) * 200 / 2  * (value/180);
 
+		value = Math.min(value, 179);
+
 		$(".level0").css("-webkit-transform", "rotate3d(0,1,0,-"+(value/2)+"deg)");
 		$(".level2, .level4, .level6").css("-webkit-transform", "translate3d(200px,0px,0px) rotate3d(0,1,0,-"+value+"deg)");
 		$(".level1, .level3, .level5, .level7").css("-webkit-transform", "translate3d(200px,0px,0px) rotate3d(0,1,0,"+value+"deg)");
@@ -76,6 +79,20 @@ var Folder = (function () {
 		} else {
 			$(".folder").css("-webkit-transform", "translate3d("+middle+"px,0px,0px) rotate3d(0,1,0,0deg)");
 		}
+
+		clearTimeout(foldedTimeout);
+		if (value>=179) {
+			foldedTimeout = setTimeout(function(){
+				$(".folder").addClass("folded");
+			}, 100);
+		} else {
+			$(".folder").removeClass("folded");
+		}
+		
+		$(".level1").on("webkitTransitionEnd", function(event){
+			$(".folder").toggleClass("folded", value>=179 );
+		});
+	
 
 		$("#slider-1 input").val(value);
 	}

@@ -122,7 +122,7 @@ button:active {
 
 /* line 53, ../sass/style.sass */
 .folder, .box, .row {
-  -webkit-transition: all 0.6s ease-in-out 0.2s;
+  -webkit-transition: all 600ms ease-in-out 0.2s;
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: left top;
   -webkit-transform-style: preserve-3d;
@@ -155,28 +155,41 @@ button:active {
 .box {
   width: 200px;
   height: 200px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0.1px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0.1px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0.1px inset;
 }
-/* line 77, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 .box.color0 {
   background-color: #6e9489;
 }
-/* line 79, ../sass/style.sass */
+/* line 83, ../sass/style.sass */
 .box.color1 {
   background-color: #dedcc3;
 }
-/* line 81, ../sass/style.sass */
+/* line 85, ../sass/style.sass */
 .box.color2 {
   background-color: #f2f1e9;
 }
-/* line 83, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 .box.color3 {
   background-color: #877963;
 }
-
-/* line 88, ../sass/style.sass */
-.level1, .level2, .level3, .level4, .level5, .level6, .level7 {
+/* line 92, ../sass/style.sass */
+.box .level1, .box .level2, .box .level3, .box .level4, .box .level5, .box .level6, .box .level7 {
   -webkit-transform: translate3d(200px, 0px, 0px);
+}
+/* line 95, ../sass/style.sass */
+.box .level0 {
+  background-color: red;
+  z-index: 1000;
+}
+
+/* line 100, ../sass/style.sass */
+.folded .level1, .folded .level2, .folded .level3, .folded .level4, .folded .level5, .folded .level6, .folded .level7 {
+  opacity: 0;
 }

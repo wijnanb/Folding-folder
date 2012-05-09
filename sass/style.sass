@@ -51,7 +51,7 @@ button
 		font-size: 12px
 
 .folder, .box, .row
-	-webkit-transition: all 0.6s ease-in-out 0.2s
+	-webkit-transition: all 600ms ease-in-out 0.2s
 	-webkit-backface-visibility: hidden
 
 	-webkit-transform-origin: left top
@@ -73,6 +73,10 @@ button
 .box
 	width: 200px
 	height: 200px
+	position: relative
+	top: 0px
+	left: 0px
+	z-index: 0
 
 	&.color0
 		background-color: #6E9489
@@ -85,5 +89,14 @@ button
 	
 	@include box-shadow(rgba(0,0,0,0.2) 0px 0px 5px 0.1px inset)
 
-.level1, .level2, .level3, .level4, .level5, .level6, .level7
-	-webkit-transform: translate3d(200px,0px,0px)
+	.level1, .level2, .level3, .level4, .level5, .level6, .level7
+		-webkit-transform: translate3d(200px,0px,0px)
+
+	.level0
+		background-color: red
+		z-index: 1000
+
+.folded
+	.level1, .level2, .level3, .level4, .level5, .level6, .level7
+		opacity: 0.0
+
