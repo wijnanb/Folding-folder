@@ -108,20 +108,21 @@ button:active {
 /* line 42, ../sass/style.sass */
 #toolbox {
   width: 170px;
-  height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   position: absolute;
   right: 0px;
   top: 0px;
+  bottom: 0px;
   padding: 15px;
+  padding-top: 200px;
   font-size: 12px;
 }
-/* line 51, ../sass/style.sass */
+/* line 52, ../sass/style.sass */
 #toolbox .block {
   margin: 10px 0px;
 }
 
-/* line 55, ../sass/style.sass */
+/* line 56, ../sass/style.sass */
 .folder, .box, .row {
   -webkit-transition: all 600ms ease-in-out 0.2s;
   -webkit-backface-visibility: hidden;
@@ -129,31 +130,31 @@ button:active {
   -webkit-transform-style: preserve-3d;
 }
 
-/* line 62, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
 .row {
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-/* line 67, ../sass/style.sass */
+/* line 68, ../sass/style.sass */
 .row-0 {
   top: 200px;
 }
 
-/* line 69, ../sass/style.sass */
+/* line 70, ../sass/style.sass */
 .row-1down, .row-2down, .row-3down {
   -webkit-transform: translate3d(0px, 200px, 0px);
   -webkit-transform-origin: left top;
 }
 
-/* line 72, ../sass/style.sass */
+/* line 73, ../sass/style.sass */
 .row-1up, .row-2up, .row-3up {
   -webkit-transform: translate3d(0px, -200px, 0px);
   -webkit-transform-origin: left bottom;
 }
 
-/* line 76, ../sass/style.sass */
+/* line 77, ../sass/style.sass */
 .box {
   width: 200px;
   height: 200px;
@@ -163,38 +164,38 @@ button:active {
   z-index: 0;
   background-color: #f2f1e9;
 }
-/* line 85, ../sass/style.sass */
+/* line 86, ../sass/style.sass */
 .box.color0 {
   background-color: #6e9489;
 }
-/* line 87, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 .box.color1 {
   background-color: #dedcc3;
 }
-/* line 89, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 .box.color2 {
   background-color: #f2f1e9;
 }
-/* line 91, ../sass/style.sass */
+/* line 92, ../sass/style.sass */
 .box.color3 {
   background-color: #877963;
 }
 
-/* line 96, ../sass/style.sass */
+/* line 97, ../sass/style.sass */
 .level1, .level2, .level3, .level4, .level5, .level6, .level7 {
   -webkit-transform: translate3d(200px, 0px, 0px);
 }
 
-/* line 100, ../sass/style.sass */
+/* line 101, ../sass/style.sass */
 .folded .level1, .folded .level2, .folded .level3, .folded .level4, .folded .level5, .folded .level6, .folded .level7 {
   opacity: 0;
 }
-/* line 102, ../sass/style.sass */
+/* line 103, ../sass/style.sass */
 .folded .front {
   opacity: 1;
 }
 
-/* line 105, ../sass/style.sass */
+/* line 106, ../sass/style.sass */
 .content, .front {
   position: absolute;
   top: 0px;
@@ -202,20 +203,20 @@ button:active {
   overflow: hidden;
   -webkit-transition: all 600ms ease-in-out 0.2s;
 }
-/* line 111, ../sass/style.sass */
+/* line 112, ../sass/style.sass */
 .content .text, .front .text {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-/* line 116, ../sass/style.sass */
+/* line 117, ../sass/style.sass */
 .front {
   width: 100%;
   height: 100%;
   opacity: 0;
 }
-/* line 120, ../sass/style.sass */
+/* line 121, ../sass/style.sass */
 .front h1 {
   background-color: black;
   padding: 12px 9px;
@@ -224,12 +225,12 @@ button:active {
   font-weight: bold;
 }
 
-/* line 128, ../sass/style.sass */
+/* line 129, ../sass/style.sass */
 .folder.no-content .content {
   opacity: 0;
 }
 
-/* line 131, ../sass/style.sass */
+/* line 132, ../sass/style.sass */
 #box-0-0 > .content {
   width: 200px;
   height: 200px;
@@ -237,7 +238,7 @@ button:active {
   background-position: 0px 0px;
 }
 
-/* line 137, ../sass/style.sass */
+/* line 138, ../sass/style.sass */
 #box-1-0 > .content {
   width: 200px;
   height: 200px;
@@ -245,7 +246,7 @@ button:active {
   background-position: -200px 0px;
 }
 
-/* line 143, ../sass/style.sass */
+/* line 144, ../sass/style.sass */
 #box-2-0 > .content {
   width: 200px;
   height: 200px;
@@ -253,7 +254,7 @@ button:active {
   background-position: -400px 0px;
 }
 
-/* line 149, ../sass/style.sass */
+/* line 150, ../sass/style.sass */
 #box-0-1 > .content {
   width: 200px;
   height: 200px;
@@ -261,7 +262,7 @@ button:active {
   background-position: 0px -200px;
 }
 
-/* line 155, ../sass/style.sass */
+/* line 156, ../sass/style.sass */
 #box-1-1 > .content {
   width: 200px;
   height: 200px;
@@ -269,7 +270,7 @@ button:active {
   background-position: -200px -200px;
 }
 
-/* line 161, ../sass/style.sass */
+/* line 162, ../sass/style.sass */
 #box-2-1 > .content {
   width: 200px;
   height: 200px;
@@ -277,7 +278,7 @@ button:active {
   background-position: -400px -200px;
 }
 
-/* line 167, ../sass/style.sass */
+/* line 168, ../sass/style.sass */
 #box-0-2 > .content {
   width: 200px;
   height: 200px;
@@ -285,7 +286,7 @@ button:active {
   background-position: 0px -400px;
 }
 
-/* line 173, ../sass/style.sass */
+/* line 174, ../sass/style.sass */
 #box-1-2 > .content {
   width: 200px;
   height: 200px;
@@ -293,7 +294,7 @@ button:active {
   background-position: -200px -400px;
 }
 
-/* line 179, ../sass/style.sass */
+/* line 180, ../sass/style.sass */
 #box-2-2 > .content {
   width: 200px;
   height: 200px;
@@ -301,7 +302,7 @@ button:active {
   background-position: -400px -400px;
 }
 
-/* line 185, ../sass/style.sass */
+/* line 186, ../sass/style.sass */
 #box-3-0 > .content {
   padding: 10px;
   width: 160px;
@@ -311,7 +312,7 @@ button:active {
   padding-top: 20px;
 }
 
-/* line 193, ../sass/style.sass */
+/* line 194, ../sass/style.sass */
 #box-3-1 > .content {
   padding: 10px;
   width: 160px;
@@ -320,7 +321,7 @@ button:active {
   height: 180px;
 }
 
-/* line 200, ../sass/style.sass */
+/* line 201, ../sass/style.sass */
 #box-3-2 > .content {
   padding: 10px;
   width: 160px;
@@ -330,7 +331,7 @@ button:active {
   padding-bottom: 20px;
 }
 
-/* line 210, ../sass/style.sass */
+/* line 211, ../sass/style.sass */
 #text-source {
   -webkit-flow-into: main-thread;
   color: #333333;
@@ -338,7 +339,7 @@ button:active {
   line-height: 14px;
   text-align: justify;
 }
-/* line 216, ../sass/style.sass */
+/* line 217, ../sass/style.sass */
 #text-source h1 {
   font-size: 16px;
   font-weight: bold;
@@ -346,11 +347,11 @@ button:active {
   line-height: 20px;
 }
 
-/* line 222, ../sass/style.sass */
+/* line 223, ../sass/style.sass */
 #box-3-0, #box-3-1, #box-3-2 {
   background-color: #f2f1e9;
 }
-/* line 224, ../sass/style.sass */
+/* line 225, ../sass/style.sass */
 #box-3-0 .text, #box-3-1 .text, #box-3-2 .text {
   -webkit-flow-from: main-thread;
 }
