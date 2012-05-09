@@ -47,8 +47,10 @@ button
 	right: 0px
 	top: 0px
 	padding: 15px
-	label
-		font-size: 12px
+	font-size: 12px
+	.block
+		margin: 10px 0px
+
 
 .folder, .box, .row
 	-webkit-transition: all 600ms ease-in-out 0.2s
@@ -64,9 +66,10 @@ button
 
 .row-0
 	top: 200px
-.row-1down
+.row-1down, .row-2down, .row-3down
 	-webkit-transform: translate3d(0px,200px,0px)
-.row-1up
+	-webkit-transform-origin: left top
+.row-1up, .row-2up, .row-3up
 	-webkit-transform: translate3d(0px,-200px,0px)
 	-webkit-transform-origin: left bottom
 
@@ -87,14 +90,10 @@ button
 	&.color3
 		background-color: #877963
 	
-	@include box-shadow(rgba(0,0,0,0.2) 0px 0px 5px 0.1px inset)
+	//@include box-shadow(rgba(0,0,0,0.2) 0px 0px 5px 0.1px inset)
 
-	.level1, .level2, .level3, .level4, .level5, .level6, .level7
-		-webkit-transform: translate3d(200px,0px,0px)
-
-	.level0
-		background-color: red
-		z-index: 1000
+.level1, .level2, .level3, .level4, .level5, .level6, .level7
+	-webkit-transform: translate3d(200px,0px,0px)
 
 .folded
 	.level1, .level2, .level3, .level4, .level5, .level6, .level7
@@ -150,4 +149,3 @@ button
 #box-2-1, #box-3-1, #box-2-2, #box-3-2
 	.text
 		-webkit-flow-from: main-thread
-

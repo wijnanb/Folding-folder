@@ -114,13 +114,14 @@ button:active {
   right: 0px;
   top: 0px;
   padding: 15px;
-}
-/* line 50, ../sass/style.sass */
-#toolbox label {
   font-size: 12px;
 }
+/* line 51, ../sass/style.sass */
+#toolbox .block {
+  margin: 10px 0px;
+}
 
-/* line 53, ../sass/style.sass */
+/* line 55, ../sass/style.sass */
 .folder, .box, .row {
   -webkit-transition: all 600ms ease-in-out 0.2s;
   -webkit-backface-visibility: hidden;
@@ -128,30 +129,31 @@ button:active {
   -webkit-transform-style: preserve-3d;
 }
 
-/* line 60, ../sass/style.sass */
+/* line 62, ../sass/style.sass */
 .row {
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-/* line 65, ../sass/style.sass */
+/* line 67, ../sass/style.sass */
 .row-0 {
   top: 200px;
 }
 
-/* line 67, ../sass/style.sass */
-.row-1down {
+/* line 69, ../sass/style.sass */
+.row-1down, .row-2down, .row-3down {
   -webkit-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform-origin: left top;
 }
 
-/* line 69, ../sass/style.sass */
-.row-1up {
+/* line 72, ../sass/style.sass */
+.row-1up, .row-2up, .row-3up {
   -webkit-transform: translate3d(0px, -200px, 0px);
   -webkit-transform-origin: left bottom;
 }
 
-/* line 73, ../sass/style.sass */
+/* line 76, ../sass/style.sass */
 .box {
   width: 200px;
   height: 200px;
@@ -159,56 +161,49 @@ button:active {
   top: 0px;
   left: 0px;
   z-index: 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0.1px inset;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0.1px inset;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px 0.1px inset;
 }
-/* line 81, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 .box.color0 {
   background-color: #6e9489;
 }
-/* line 83, ../sass/style.sass */
+/* line 86, ../sass/style.sass */
 .box.color1 {
   background-color: #dedcc3;
 }
-/* line 85, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 .box.color2 {
   background-color: #f2f1e9;
 }
-/* line 87, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 .box.color3 {
   background-color: #877963;
 }
-/* line 92, ../sass/style.sass */
-.box .level1, .box .level2, .box .level3, .box .level4, .box .level5, .box .level6, .box .level7 {
+
+/* line 95, ../sass/style.sass */
+.level1, .level2, .level3, .level4, .level5, .level6, .level7 {
   -webkit-transform: translate3d(200px, 0px, 0px);
 }
-/* line 95, ../sass/style.sass */
-.box .level0 {
-  background-color: red;
-  z-index: 1000;
-}
 
-/* line 100, ../sass/style.sass */
+/* line 99, ../sass/style.sass */
 .folded .level1, .folded .level2, .folded .level3, .folded .level4, .folded .level5, .folded .level6, .folded .level7 {
   opacity: 0;
 }
 
-/* line 103, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 .content {
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
 }
-/* line 108, ../sass/style.sass */
+/* line 107, ../sass/style.sass */
 .content .text {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-/* line 113, ../sass/style.sass */
+/* line 112, ../sass/style.sass */
 #box-2-1 > .content {
   padding: 10px;
   width: 170px;
@@ -217,7 +212,7 @@ button:active {
   padding-top: 20px;
 }
 
-/* line 120, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 #box-3-1 > .content {
   padding: 10px;
   width: 170px;
@@ -226,7 +221,7 @@ button:active {
   padding-top: 20px;
 }
 
-/* line 127, ../sass/style.sass */
+/* line 126, ../sass/style.sass */
 #box-2-2 > .content {
   padding: 10px;
   width: 170px;
@@ -235,7 +230,7 @@ button:active {
   padding-bottom: 20px;
 }
 
-/* line 134, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 #box-3-2 > .content {
   padding: 10px;
   width: 170px;
@@ -244,7 +239,7 @@ button:active {
   padding-bottom: 20px;
 }
 
-/* line 143, ../sass/style.sass */
+/* line 142, ../sass/style.sass */
 #text-source {
   -webkit-flow-into: main-thread;
   color: #333333;
@@ -253,7 +248,7 @@ button:active {
   text-align: justify;
 }
 
-/* line 151, ../sass/style.sass */
+/* line 150, ../sass/style.sass */
 #box-2-1 .text, #box-3-1 .text, #box-2-2 .text, #box-3-2 .text {
   -webkit-flow-from: main-thread;
 }

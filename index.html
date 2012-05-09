@@ -67,19 +67,24 @@
 		</div>
 	</div>
 	<div id="toolbox">
+		<div class="block">
 		<div class="slider" id="slider-0">
-			<label>vertical</label>
-			<input type="range" min="0" max="180" value="0">
-			<span class="value">0</span>
+				<label>vertical</label>
+				<input type="range" min="0" max="180" value="0">
+				<span class="value">0</span>
+			</div>
+			<div class="slider" id="slider-1">
+				<label>horizontal</label>
+				<input type="range" min="0" max="180" value="0">
+				<span class="value">0</span>
+			</div>
 		</div>
-		<div class="slider" id="slider-1">
-			<label>horizontal</label>
-			<input type="range" min="0" max="180" value="0">
-			<span class="value">0</span>
-		</div>
-		<div>
+		<div class="block">
 			<button id="button-open">open</button>
 			<button id="button-close">close</button>
+		</div>
+		<div class="block">
+			<input type="checkbox" checked="checked" id="checkbox-content"> show content
 		</div>
 	</div>
 </body>
