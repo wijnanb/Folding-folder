@@ -1,0 +1,89 @@
+@import compass/reset
+@import "compass/css3"
+
+html, body
+	width: 100%
+	height: 100%
+	background-color: #41434A
+	font-family: helvetica
+	color: white
+
+button
+	font-family: Helvetica, Arial, sans-serif
+	font-size: 12px
+	color: #706f70
+	padding: 6px 12px
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff),to(#dbdbdb))
+	-webkit-border-radius: 3px
+	border: 1px solid #a8a8a8
+	-webkit-box-shadow: 0px 0px 0px rgba(000,000,000,0), inset 0px 0px 1px rgba(255,255,255,1)
+	text-shadow: 0px 0px 0px rgba(000,000,000,0), 0px 1px 0px rgba(255,255,255,0.3)
+	cursor: pointer
+	&:active
+		background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb),to(#ebebeb))
+	
+
+#canvas
+	width: 800px
+	height: 600px
+	
+	margin-top: -300px
+	margin-left: -500px
+	position: absolute
+	top: 50%
+	left: 50%
+
+	cursor: pointer
+
+	-webkit-perspective: 1200
+	-webkit-perspective-origin-x: center 
+	-webkit-perspective-origin-y: center
+
+#toolbox
+	width: 170px
+	height: 100%
+	background-color: rgba(255,255,255,0.2)
+	position: absolute
+	right: 0px
+	top: 0px
+	padding: 15px
+	label
+		font-size: 12px
+
+.folder, .box, .row
+	-webkit-transition: all 0.6s ease-in-out 0.2s
+	-webkit-backface-visibility: hidden
+
+	-webkit-transform-origin: left top
+	-webkit-transform-style: preserve-3d
+
+.row
+	position: absolute
+	top: 0px
+	left: 0px
+
+.row-0
+	top: 200px
+.row-1down
+	-webkit-transform: translate3d(0px,200px,0px)
+.row-1up
+	-webkit-transform: translate3d(0px,-200px,0px)
+	-webkit-transform-origin: left bottom
+
+.box
+	width: 200px
+	height: 200px
+
+	&.color0
+		background-color: #6E9489
+	&.color1 
+		background-color: #DEDCC3
+	&.color2
+		background-color: #F2F1E9
+	&.color3
+		background-color: #877963
+	
+	@include box-shadow(rgba(0,0,0,0.2) 0px 0px 5px 0.1px inset)
+
+.level1, .level2, .level3, .level4, .level5, .level6, .level7
+	-webkit-transform: translate3d(200px,0px,0px)
