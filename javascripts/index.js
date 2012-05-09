@@ -18,6 +18,7 @@ var Folder = (function () {
 		$("#button-open").on("click", open);
 		$("#button-close").on("click", close);
 		canvas.on("click", toggle);
+		$("#checkbox-content").on("change",onToggleContent);
 	};
 
 	var open = function() {
@@ -36,6 +37,11 @@ var Folder = (function () {
 		folded ? open() : close();
 	}
 
+	var onToggleContent = function(event) {
+		var checked = $(event.target).prop("checked");
+		$(".folder").toggleClass("no-content", !checked )
+	}
+
 	var onSliderChange = function(event) {
 		var value = $(event.target).val();
 		$(event.target).parent().find(".value").html(value);
@@ -43,9 +49,11 @@ var Folder = (function () {
 		switch ($(event.target).parent().prop("id")) {
 			case "slider-0":
 				openVertical(value);
+				openHorizontal(180);
 				break;
 			case "slider-1":
 				openHorizontal(value);
+				openVertical(0);
 				break;
 		}
 	}

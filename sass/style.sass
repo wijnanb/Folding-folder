@@ -80,6 +80,7 @@ button
 	top: 0px
 	left: 0px
 	z-index: 0
+	background-color: #F2F1E9
 
 	&.color0
 		background-color: #6E9489
@@ -98,42 +99,109 @@ button
 .folded
 	.level1, .level2, .level3, .level4, .level5, .level6, .level7
 		opacity: 0.0
+	.front
+		opacity: 1.0
 
-.content
+.content, .front
 	position: absolute
 	top: 0px
 	left: 0px
 	overflow: hidden
+	-webkit-transition: all 600ms ease-in-out 0.2s
 	.text
 		width: 100%
 		height: 100%
 		overflow: hidden
 
+.front
+	width: 100%
+	height: 100%
+	opacity: 0.0
+	h1
+		background-color: black
+		padding: 12px 9px
+		width: 100%
+		font-size: 18px
+		font-weight: bold
+
+.folder.no-content
+	.content
+		opacity: 0.0
+
+#box-0-0 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: 0px 0px
+
+#box-1-0 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: -200px 0px
+
+#box-2-0 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: -400px 0px
+
+#box-0-1 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: 0px -200px
+
+#box-1-1 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: -200px -200px
+
 #box-2-1 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: -400px -200px
+
+#box-0-2 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: 0px -400px
+
+#box-1-2 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: -200px -400px
+
+#box-2-2 > .content
+	width: 200px
+	height: 200px
+	background-image: url(../images/map_winterslag.png)
+	background-position: -400px -400px
+
+#box-3-0 > .content
 	padding: 10px
-	width: 170px
+	width: 160px
+	padding-right: 20px
 	padding-left: 20px
 	height: 170px
 	padding-top: 20px
 
 #box-3-1 > .content
 	padding: 10px
-	width: 170px
+	width: 160px
 	padding-right: 20px
-	height: 170px
-	padding-top: 20px
-
-#box-2-2 > .content
-	padding: 10px
-	width: 170px
 	padding-left: 20px
-	height: 170px
-	padding-bottom: 20px
+	height: 180px
 
 #box-3-2 > .content
 	padding: 10px
-	width: 170px
+	width: 160px
 	padding-right: 20px
+	padding-left: 20px
 	height: 170px
 	padding-bottom: 20px
 
@@ -145,7 +213,13 @@ button
 	font-size: 12px
 	line-height: 14px
 	text-align: justify
+	h1
+		font-size: 16px
+		font-weight: bold
+		padding-bottom: 10px
+		line-height: 20px
 
-#box-2-1, #box-3-1, #box-2-2, #box-3-2
+#box-3-0, #box-3-1, #box-3-2
+	background-color: #F2F1E9
 	.text
 		-webkit-flow-from: main-thread

@@ -161,85 +161,176 @@ button:active {
   top: 0px;
   left: 0px;
   z-index: 0;
+  background-color: #f2f1e9;
 }
-/* line 84, ../sass/style.sass */
+/* line 85, ../sass/style.sass */
 .box.color0 {
   background-color: #6e9489;
 }
-/* line 86, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 .box.color1 {
   background-color: #dedcc3;
 }
-/* line 88, ../sass/style.sass */
+/* line 89, ../sass/style.sass */
 .box.color2 {
   background-color: #f2f1e9;
 }
-/* line 90, ../sass/style.sass */
+/* line 91, ../sass/style.sass */
 .box.color3 {
   background-color: #877963;
 }
 
-/* line 95, ../sass/style.sass */
+/* line 96, ../sass/style.sass */
 .level1, .level2, .level3, .level4, .level5, .level6, .level7 {
   -webkit-transform: translate3d(200px, 0px, 0px);
 }
 
-/* line 99, ../sass/style.sass */
+/* line 100, ../sass/style.sass */
 .folded .level1, .folded .level2, .folded .level3, .folded .level4, .folded .level5, .folded .level6, .folded .level7 {
   opacity: 0;
 }
-
 /* line 102, ../sass/style.sass */
-.content {
+.folded .front {
+  opacity: 1;
+}
+
+/* line 105, ../sass/style.sass */
+.content, .front {
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
+  -webkit-transition: all 600ms ease-in-out 0.2s;
 }
-/* line 107, ../sass/style.sass */
-.content .text {
+/* line 111, ../sass/style.sass */
+.content .text, .front .text {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-/* line 112, ../sass/style.sass */
+/* line 116, ../sass/style.sass */
+.front {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+/* line 120, ../sass/style.sass */
+.front h1 {
+  background-color: black;
+  padding: 12px 9px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* line 128, ../sass/style.sass */
+.folder.no-content .content {
+  opacity: 0;
+}
+
+/* line 131, ../sass/style.sass */
+#box-0-0 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: 0px 0px;
+}
+
+/* line 137, ../sass/style.sass */
+#box-1-0 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: -200px 0px;
+}
+
+/* line 143, ../sass/style.sass */
+#box-2-0 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: -400px 0px;
+}
+
+/* line 149, ../sass/style.sass */
+#box-0-1 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: 0px -200px;
+}
+
+/* line 155, ../sass/style.sass */
+#box-1-1 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: -200px -200px;
+}
+
+/* line 161, ../sass/style.sass */
 #box-2-1 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: -400px -200px;
+}
+
+/* line 167, ../sass/style.sass */
+#box-0-2 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: 0px -400px;
+}
+
+/* line 173, ../sass/style.sass */
+#box-1-2 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: -200px -400px;
+}
+
+/* line 179, ../sass/style.sass */
+#box-2-2 > .content {
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/map_winterslag.png);
+  background-position: -400px -400px;
+}
+
+/* line 185, ../sass/style.sass */
+#box-3-0 > .content {
   padding: 10px;
-  width: 170px;
+  width: 160px;
+  padding-right: 20px;
   padding-left: 20px;
   height: 170px;
   padding-top: 20px;
 }
 
-/* line 119, ../sass/style.sass */
+/* line 193, ../sass/style.sass */
 #box-3-1 > .content {
   padding: 10px;
-  width: 170px;
+  width: 160px;
   padding-right: 20px;
-  height: 170px;
-  padding-top: 20px;
+  padding-left: 20px;
+  height: 180px;
 }
 
-/* line 126, ../sass/style.sass */
-#box-2-2 > .content {
+/* line 200, ../sass/style.sass */
+#box-3-2 > .content {
   padding: 10px;
-  width: 170px;
+  width: 160px;
+  padding-right: 20px;
   padding-left: 20px;
   height: 170px;
   padding-bottom: 20px;
 }
 
-/* line 133, ../sass/style.sass */
-#box-3-2 > .content {
-  padding: 10px;
-  width: 170px;
-  padding-right: 20px;
-  height: 170px;
-  padding-bottom: 20px;
-}
-
-/* line 142, ../sass/style.sass */
+/* line 210, ../sass/style.sass */
 #text-source {
   -webkit-flow-into: main-thread;
   color: #333333;
@@ -247,8 +338,19 @@ button:active {
   line-height: 14px;
   text-align: justify;
 }
+/* line 216, ../sass/style.sass */
+#text-source h1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
 
-/* line 150, ../sass/style.sass */
-#box-2-1 .text, #box-3-1 .text, #box-2-2 .text, #box-3-2 .text {
+/* line 222, ../sass/style.sass */
+#box-3-0, #box-3-1, #box-3-2 {
+  background-color: #f2f1e9;
+}
+/* line 224, ../sass/style.sass */
+#box-3-0 .text, #box-3-1 .text, #box-3-2 .text {
   -webkit-flow-from: main-thread;
 }
