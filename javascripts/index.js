@@ -14,7 +14,7 @@ var Folder = (function () {
 		});	
 
 		$(".slider").on("change",onSliderChange);
-		
+	  $("#button-exploder").on("click", explode);	
 		$("#button-open").on("click", open);
 		$("#button-close").on("click", close);
 		canvas.on("click", toggle);
@@ -22,10 +22,14 @@ var Folder = (function () {
 	};
 
 	var open = function() {
-		openVertical(0)
+    openVertical(0);
 		openHorizontal(15, 800);
 		folded = false;
 	}
+
+  var explode = function() {
+    openExploder(0,0);
+  }
 
 	var close = function() {
 		openHorizontal(180);
@@ -57,6 +61,15 @@ var Folder = (function () {
 				break;
 		}
 	}
+  var openExploder = function(value, delay) {
+    console.log("blah");
+    var x = Math.floor(Math.random()*4);
+    var y = Math.floor(Math.random()*4);    
+    var z = Math.floor(Math.random()*4);    
+    $(".box").each(function(index) {$(this).css("-webkit-transform", "translate3d(0px,-500px,0px) rotate3d(0,0,0,30deg)")});
+    //$(".box").css("-webkit-transition-property: -webkit-transform; -webkit-transition-duration: 500ms; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translateX(10%) translateY(80%) translateZ(90px) rotateX(200deg) rotateY(50deg) rotate(90deg);");
+
+  }
 
 	var openVertical = function(value, delay) {
 		if (typeof delay == 'undefined') { delay = 200; }
