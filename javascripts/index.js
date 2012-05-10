@@ -4,7 +4,11 @@ var Folder = (function () {
 	var folded = true;
 	var boxes = [];
 	var foldedTimeout;
-
+  var iterator = 1;
+  var x = (Math.random()*2);
+  var y = Math.floor(Math.random()*20);         
+  var z = Math.floor(Math.random()*20)-10;
+  var boxlistmult = []; 
 	var init = function() {
 		canvas = $("#canvas");
 
@@ -28,7 +32,12 @@ var Folder = (function () {
 	}
 
   var explode = function() {
-    openExploder(0,0);
+
+	$(".box").css("-webkit-transition-delay","0ms");
+
+        setInterval(function(){
+        openExploder(0,0);
+     },200);
   }
 
 	var close = function() {
@@ -62,13 +71,12 @@ var Folder = (function () {
 		}
 	}
   var openExploder = function(value, delay) {
-    console.log("blah");
-    var x = Math.floor(Math.random()*4);
-    var y = Math.floor(Math.random()*4);    
-    var z = Math.floor(Math.random()*4);    
-    $(".box").each(function(index) {$(this).css("-webkit-transform", "translate3d(0px,-500px,0px) rotate3d(0,0,0,30deg)")});
-    //$(".box").css("-webkit-transition-property: -webkit-transform; -webkit-transition-duration: 500ms; -webkit-transition-timing-function: ease-in-out; -webkit-transform: translateX(10%) translateY(80%) translateZ(90px) rotateX(200deg) rotateY(50deg) rotate(90deg);");
-
+    console.log("blah");   
+    $(".box").each(function(index) {
+      if (typeof(boxlistmult[index]) == "undefined") { boxlistmult[index] = (Math.random()*8)-4;} 
+      $(this).css("-webkit-transform", "translate3d("+z*iterator*boxlistmult[index]+"px,"+x*iterator*boxlistmult[index]+"px,"+z*iterator*boxlistmult[index]+"px) rotate3d(0,1,1,"+y*iterator*boxlistmult[index]+"deg)");
+      iterator = iterator*1.02;
+    });
   }
 
 	var openVertical = function(value, delay) {
@@ -119,7 +127,8 @@ var Folder = (function () {
 		init: init,
 		open: open,
 		close: close,
-		toggle: toggle
+		toggle: toggle,
+    explode: explode
 	};
 })();
 
