@@ -4,7 +4,11 @@ var Folder = (function () {
 	var folded = true;
 	var boxes = [];
 	var foldedTimeout;
-
+  var iterator = 1;
+  var x = (Math.random()*2);
+  var y = Math.floor(Math.random()*20);         
+  var z = Math.floor(Math.random()*20)-10;
+  var boxlistmult = []; 
 	var init = function() {
 		canvas = $("#canvas");
 
@@ -14,7 +18,7 @@ var Folder = (function () {
 		});	
 
 		$(".slider").on("change",onSliderChange);
-		
+	  $("#button-exploder").on("click", explode);	
 		$("#button-open").on("click", open);
 		$("#button-close").on("click", close);
 		canvas.on("click", toggle);
@@ -22,10 +26,19 @@ var Folder = (function () {
 	};
 
 	var open = function() {
-		openVertical(0)
+    openVertical(0);
 		openHorizontal(15, 800);
 		folded = false;
 	}
+
+  var explode = function() {
+
+	$(".box").css("-webkit-transition-delay","0ms");
+
+        setInterval(function(){
+        openExploder(0,0);
+     },200);
+  }
 
 	var close = function() {
 		openHorizontal(180);
@@ -57,6 +70,14 @@ var Folder = (function () {
 				break;
 		}
 	}
+  var openExploder = function(value, delay) {
+    console.log("blah");   
+    $(".box").each(function(index) {
+      if (typeof(boxlistmult[index]) == "undefined") { boxlistmult[index] = (Math.random()*8)-4;} 
+      $(this).css("-webkit-transform", "translate3d("+z*iterator*boxlistmult[index]+"px,"+x*iterator*boxlistmult[index]+"px,"+z*iterator*boxlistmult[index]+"px) rotate3d(0,1,1,"+y*iterator*boxlistmult[index]+"deg)");
+      iterator = iterator*1.02;
+    });
+  }
 
 	var openVertical = function(value, delay) {
 		if (typeof delay == 'undefined') { delay = 200; }
@@ -106,7 +127,8 @@ var Folder = (function () {
 		init: init,
 		open: open,
 		close: close,
-		toggle: toggle
+		toggle: toggle,
+    explode: explode
 	};
 })();
 

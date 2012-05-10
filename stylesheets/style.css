@@ -124,7 +124,7 @@ button:active {
 
 /* line 56, ../sass/style.sass */
 .folder, .box, .row {
-  -webkit-transition: all 600ms ease-in-out 0.2s;
+  -webkit-transition: all 200ms;
   -webkit-backface-visibility: hidden;
   -webkit-transform-origin: left top;
   -webkit-transform-style: preserve-3d;
