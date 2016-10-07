@@ -22,7 +22,6 @@ button
 	&:active
 		background: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb),to(#ebebeb))
 	
-
 #canvas
 	width: 800px
 	height: 600px
@@ -112,7 +111,8 @@ button
 	.text
 		width: 100%
 		height: 100%
-		overflow: hidden
+		overflow: visible
+		color: black
 
 .front
 	width: 100%
@@ -132,55 +132,55 @@ button
 #box-0-0 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: 0px 0px
 
 #box-1-0 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: -200px 0px
 
 #box-2-0 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: -400px 0px
 
 #box-0-1 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: 0px -200px
 
 #box-1-1 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: -200px -200px
 
 #box-2-1 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: -400px -200px
 
 #box-0-2 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: 0px -400px
 
 #box-1-2 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: -200px -400px
 
 #box-2-2 > .content
 	width: 200px
 	height: 200px
-	background-image: url(../images/map_winterslag.png)
+	background-image: url(../images/map_london.png)
 	background-position: -400px -400px
 
 #box-3-0 > .content
@@ -206,21 +206,3 @@ button
 	height: 170px
 	padding-bottom: 20px
 
-// css regions
-// http://corlan.org/downloads/simple_single_thread.html
-#text-source
-	-webkit-flow-into: main-thread
-	color: #333
-	font-size: 12px
-	line-height: 14px
-	text-align: justify
-	h1
-		font-size: 16px
-		font-weight: bold
-		padding-bottom: 10px
-		line-height: 20px
-
-#box-3-0, #box-3-1, #box-3-2
-	background-color: #F2F1E9
-	.text
-		-webkit-flow-from: main-thread

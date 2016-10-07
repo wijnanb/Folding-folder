@@ -1,1 +1,0 @@
-http://maps.google.com/maps/api/staticmap?sensor=false&size=640x400&scale=2&zoom=12&center=Winterslag+Belgium&style=feature:all|element:labels|visibility:off&style=feature:all|element:geometry|hue:0x877963|lightness:31|gamma:0.63

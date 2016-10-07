@@ -1,1 +1,10 @@
 Demo on: http://www.newpage.be/folder
+
+
+# Map
+
+This demo uses Google static maps to display the map in a visually appealing way.
+
+An example:
+
+    http://maps.google.com/maps/api/staticmap?sensor=false&size=640x400&scale=2&zoom=12&center=London&style=feature:all|element:labels|visibility:off&style=feature:all|element:geometry|hue:0x877963|lightness:31|gamma:0.63

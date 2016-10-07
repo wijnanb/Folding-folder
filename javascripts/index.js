@@ -87,6 +87,7 @@ var Folder = (function () {
 		}
 
 		clearTimeout(foldedTimeout);
+		
 		if (value>=179) {
 			foldedTimeout = setTimeout(function(){
 				$(".folder").addClass("folded");
